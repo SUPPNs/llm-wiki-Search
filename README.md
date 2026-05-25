@@ -4,19 +4,20 @@
 Markdown 知識ベースです。Obsidian でそのまま閲覧できるよう、知識ページ間の
 関係は `[[Wikiリンク]]` で結びます。
 
-このリポジトリは [Pratiyush/llm-wiki](https://github.com/Pratiyush/llm-wiki)
-の考え方を研究調査向けに適用しています。中心となる設計は次の二層と編集規約です。
+このリポジトリは Karpathy の LLM Wiki の運用思想と
+[Pratiyush/llm-wiki](https://github.com/Pratiyush/llm-wiki) の構造を参考に、
+研究調査向けの四つの中核層で運用します。
 
-- `raw/`: immutable source storage。論文、ブログ、公開ドキュメント、GitHub 由来資料、
-  Web ページ、動画メモ、手元の観察記録などの原資料を変更せず保持する不変層
-- `wiki/`: LLM が原資料を根拠に整理し、関連付け、問いを育てる知識層
-- `AGENTS.md`: LLM が一貫した方法で知識層を更新するための規約
+- `raw/`: immutable source storage。論文、ブログ、ドキュメント、GitHub 由来資料、
+  Web ページ、動画メモなどの原資料を変更せず保持する不変層
+- `wiki/`: LLM が原資料を根拠に生成・更新する知識層
+- `schema/`: 命名規則、テンプレート、ingest・query・lint 手順、エージェント規約
+- `logs/`: ingest、query、lint の実行履歴を追記する記録層
 
 ## Directory Structure
 
 ```text
 research-llm-wiki/
-├── AGENTS.md
 ├── raw/
 │   ├── papers/
 │   ├── blogs/
@@ -32,10 +33,18 @@ research-llm-wiki/
 │   ├── themes/
 │   ├── questions/
 │   ├── comparisons/
-│   ├── templates/
 │   └── index.md
+├── schema/
+│   ├── AGENTS.md
+│   ├── naming.md
+│   ├── ingest.md
+│   ├── query.md
+│   ├── lint.md
+│   └── templates/
 ├── logs/
-│   └── log.md
+│   ├── ingest.md
+│   ├── query.md
+│   └── lint.md
 ├── scripts/
 └── README.md
 ```
@@ -44,59 +53,55 @@ research-llm-wiki/
 
 | 場所 | 内容 | 編集方針 |
 | --- | --- | --- |
-| `raw/papers/` | PDF、書誌情報、論文本文の保存物 | 原資料として変更しない |
-| `raw/blogs/` | ブログ記事や解説記事の保存物 | 原資料として変更しない |
-| `raw/docs/` | 公式ドキュメント、技術仕様、公開資料の保存物 | 原資料として変更しない |
-| `raw/github/` | README、issue、discussion、コード参照など GitHub 由来の保存物 | 原資料として変更しない |
-| `raw/web/` | Web 記事や公開ドキュメントの保存物 | 原資料として変更しない |
-| `raw/youtube/` | 動画の URL、字幕、視聴メモの保存物 | 原資料として変更しない |
-| `raw/notes/` | 人間が取得した一次メモ、観察記録 | 原資料として変更しない |
-| `wiki/papers/` | 論文単位の読解と位置付け | LLM が更新可 |
+| `raw/` | PDF、ブログ、仕様、Web・動画・GitHub 由来資料、一次メモ | 原資料として変更しない |
+| `wiki/papers/` | 論文・資料単位の読解と位置付け | LLM が更新可 |
 | `wiki/concepts/` | 手法、概念、評価軸、データセット | LLM が更新可 |
 | `wiki/architectures/` | システム構成、機能分解、運用フロー | LLM が更新可 |
 | `wiki/themes/` | 研究テーマ候補と検証計画 | LLM が更新可 |
 | `wiki/questions/` | 未解決課題、検証すべき問い | LLM が更新可 |
 | `wiki/comparisons/` | 手法・論文・課題設定の比較表 | LLM が更新可 |
+| `schema/` | 運用規則とページテンプレート | 運用設計の変更時に更新 |
+| `logs/ingest.md` | 原資料の取り込み履歴 | 追記専用 |
+| `logs/query.md` | Query 成果を wiki に保存した履歴 | 追記専用 |
+| `logs/lint.md` | Wiki 点検の履歴 | 追記専用 |
 
 ## Getting Started
 
-1. 収集した論文、ブログ、ドキュメント、GitHub 由来資料などの原資料を適切な
-   `raw/` サブフォルダに保存します。`raw/` は immutable source storage とし、
-   保存後は上書きせず、訂正が必要な場合は別資料として追加します。
-2. LLM はまず [wiki/index.md](wiki/index.md) と `AGENTS.md` を読みます。
-3. 原資料を読んで、該当する雛形を `wiki/templates/` から選び、既存ページが
-   あれば更新し、なければページを作成します。
-4. ページには、根拠のある事実、解釈、未解決課題を混在させずに記述し、
-   `情報源` セクションから原資料を追跡可能にします。
-5. テーマや問いを `[[Wikiリンク]]` で接続し、重要な更新を
-   [logs/log.md](logs/log.md) に追記します。
+1. 原資料を適切な `raw/` サブフォルダに保存します。保存後は上書き、移動、
+   改名、削除を行いません。
+2. LLM はまず [schema/AGENTS.md](schema/AGENTS.md)、
+   [schema/ingest.md](schema/ingest.md)、[wiki/index.md](wiki/index.md) を読みます。
+3. 原資料を読み、[schema/templates/](schema/templates/) の雛形に従って、
+   既存ページがあれば更新し、なければ `wiki/` にページを作成します。
+4. ページでは事実、解釈、未解決課題を分離し、`情報源` から原資料を追跡可能にします。
+5. 重要な取り込みは [logs/ingest.md](logs/ingest.md) に追記し、
+   [schema/lint.md](schema/lint.md) に従って点検します。
 
 ## 運用サイクル
 
-- 取り込み: 新しい原資料を読み、関連する知識ページと `wiki/index.md` を更新します。
-- 問い合わせ: 有用な比較、分析、接続、研究テーマ候補、未解決課題が得られたら
-  会話だけに残さず `wiki/` に保存します。
-- 定期点検: ときどき wiki-lint を行い、索引漏れ、リンク切れ、孤立ページ、
-  矛盾、情報源やページ化すべき概念の不足を確認します。
+- **Ingest**: [schema/ingest.md](schema/ingest.md) に従って原資料を wiki 化し、
+  [logs/ingest.md](logs/ingest.md) に記録します。
+- **Query**: [schema/query.md](schema/query.md) に従い、有用な比較、接続、研究テーマ候補、
+  未解決課題を会話だけに残さず wiki に保存し、[logs/query.md](logs/query.md) に記録します。
+- **Lint**: [schema/lint.md](schema/lint.md) に従い、索引漏れ、リンク切れ、孤立ページ、
+  セクション不足、情報源や矛盾の記録不足を点検し、[logs/lint.md](logs/lint.md) に記録します。
 
 ## Page Templates
 
-- [論文ページ](wiki/templates/paper.md)
-- [概念ページ](wiki/templates/concept.md)
-- [アーキテクチャページ](wiki/templates/architecture.md)
-- [研究テーマ候補ページ](wiki/templates/theme.md)
-- [未解決課題ページ](wiki/templates/question.md)
-- [比較ページ](wiki/templates/comparison.md)
+- [論文ページ](schema/templates/paper.md)
+- [概念ページ](schema/templates/concept.md)
+- [アーキテクチャページ](schema/templates/architecture.md)
+- [研究テーマ候補ページ](schema/templates/theme.md)
+- [未解決課題ページ](schema/templates/question.md)
+- [比較ページ](schema/templates/comparison.md)
 
 ## Conventions
 
-- ページ名は内容が安定するまでは短く明確にし、ファイル名は `kebab-case.md` を
-  基本とします。
+- ファイル名とリンク規則は [schema/naming.md](schema/naming.md) に定めます。
 - 内部参照は `[[concepts/retrieval-augmented-generation|Retrieval-Augmented Generation]]`
   のような Obsidian 形式を使います。
-- 出典同士が食い違う場合は結論を消さず、対象ページの `矛盾` に双方を
-  記録します。
-- 詳細な編集規約は [AGENTS.md](AGENTS.md) を優先します。
+- 出典同士が食い違う場合は結論を消さず、対象ページの `矛盾` に双方を記録します。
+- 詳細な編集規約は [schema/AGENTS.md](schema/AGENTS.md) を優先します。
 
 ## References
 
@@ -105,4 +110,4 @@ research-llm-wiki/
 - [Pratiyush/llm-wiki](https://github.com/Pratiyush/llm-wiki) - raw、wiki、agent schema
   を分離し、Wiki リンクで知識を結ぶ実装の参照元
 - [Pratiyush/llm-wiki Architecture](https://github.com/Pratiyush/llm-wiki/blob/master/docs/architecture.md)
-  - 三層構造と LLM 管理の wiki レイヤーの説明
+  - レイヤー構造と LLM 管理の wiki の説明

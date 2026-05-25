@@ -20,7 +20,7 @@ RAG と GraphRAG は、質問時に根拠を取得して回答へ渡す検索・
 
 - GraphRAG 実装解説: `raw/blogs/graphrag_qiita_ksonoda_2024.md`
 - GraphRAG 評価論文: [[papers/anaguchi-2025-graphrag-comparison|GraphRAG 比較分析]]
-- LLM Wiki 運用定義: [../../README.md](../../README.md), [../../AGENTS.md](../../AGENTS.md)
+- LLM Wiki 運用定義: [../../README.md](../../README.md), [../../schema/AGENTS.md](../../schema/AGENTS.md)
 - 関連する概念: [[concepts/graphrag|GraphRAG]]
 - 関連する研究テーマ候補: [[themes/traceable-graphrag-for-research-discovery|研究テーマ探索のための追跡可能な GraphRAG]]
 
@@ -35,7 +35,7 @@ RAG と GraphRAG は、質問時に根拠を取得して回答へ渡す検索・
 | 役立つ場面 | 一つの問いに対し該当記述を取得する | 複数概念・関係をまたぐ問いを検索する | 調査を越えて発見、比較、矛盾、次の研究問いを残す |
 | 例となる出力 | 質問への回答と参照チャンク | 質問への回答とグラフ由来の関連コンテキスト | [[concepts/graphrag|概念ページ]]、本比較、[[questions/graphrag-open-problems|未解決課題]]、[[themes/traceable-graphrag-for-research-discovery|研究テーマ候補]] |
 | 主な注意点 | 類似検索で必要な関係や文脈を取りこぼす可能性 | KG の誤抽出・欠損、構築費用、質問型による性能差 | 整理が古くなる、事実と解釈が混ざる、リンク切れや索引漏れが生じうる |
-| この wiki での根拠 | ksonoda (2024) の RAG 説明、Anaguchi et al. (2025) のベースライン | ksonoda (2024) の実装例、Anaguchi et al. (2025) の比較結果 | `README.md` と `AGENTS.md` に定義された現行運用 |
+| この wiki での根拠 | ksonoda (2024) の RAG 説明、Anaguchi et al. (2025) のベースライン | ksonoda (2024) の実装例、Anaguchi et al. (2025) の比較結果 | `README.md` と `schema/AGENTS.md` に定義された現行運用 |
 
 ## 位置付けの違い
 
@@ -77,5 +77,5 @@ RAG と GraphRAG は、質問時に根拠を取得して回答へ渡す検索・
 - `raw/blogs/graphrag_qiita_ksonoda_2024.md` - RAG と GraphRAG の説明、Neo4j・LangChain サンプル、実装上の留保。
 - `raw/papers/graphrag-comparison.pdf` - RAG と 2 種の GraphRAG の QASPER 比較結果。
 - [../../README.md](../../README.md) - Research LLM Wiki の目的、二層構造、運用サイクル。
-- [../../AGENTS.md](../../AGENTS.md) - `raw/` 不変、`wiki/` 更新、事実・解釈・未解決課題の分離とリンク運用規約。
+- [../../schema/AGENTS.md](../../schema/AGENTS.md) - `raw/` 不変、`wiki/` 更新、事実・解釈・未解決課題の分離とリンク運用規約。
 - [Qiita: GraphRAGをわかりやすく解説](https://qiita.com/ksonoda/items/98a6607f31d0bbb237ef) - 保存済み記事の公開元。

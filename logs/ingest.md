@@ -1,7 +1,7 @@
-# Update Log
+# Ingest Log
 
-重要な wiki 更新の追記専用ログです。過去の項目を修正せず、訂正や追加説明も新しい
-項目として追記します。
+原資料の取り込みと、それに伴う重要な wiki・schema 更新の追記専用ログです。
+このファイルは旧 `logs/log.md` の履歴を継承しています。
 
 ## 2026-05-25 | Initialize research wiki
 
@@ -61,12 +61,6 @@
 - Change: GraphRAG の定義、従来 RAG との差、グラフ検索、Neo4j、LangChain の実装要素を整理した。解説記事のデモは論文の定量評価と区別し、実装と根拠忠実性の比較課題および研究テーマ候補に接続した。
 - Structure: 指定された open problems の内容は、現行規約で定めた未解決課題の保存先 `wiki/questions/` に保存し、新しい `research_questions/` レイヤーは追加していない。
 
-## 2026-05-26 | RAG・GraphRAG・LLM Wiki の役割比較を追加
-
-- Updated: [[comparisons/rag_vs_graphrag|RAG・GraphRAG・LLM Wiki の比較]], `wiki/index.md`
-- Evidence: `raw/blogs/graphrag_qiita_ksonoda_2024.md`, `raw/papers/graphrag-comparison.pdf`, `README.md`, `AGENTS.md`
-- Change: RAG と GraphRAG を回答時の検索方式、Research LLM Wiki を調査成果の永続的な知識層として区別し、三者を併用する研究テーマ探索上の位置付けを整理した。
-
 ## 2026-05-26 | HITL ML システムアーキテクチャ論文を取り込み
 
 - Updated: [[papers/shimbo-2024-hitl-ml-system-architecture|HITL ML の運用のためのシステムアーキテクチャの定義と実践]]
@@ -76,6 +70,12 @@
 - Evidence: `raw/papers/human_in_the_loop_ml_system_architecture_2024.pdf`
 - Change: 腐食診断を事例とする HITL の概念、運用・開発連携アーキテクチャ、人間の役割、報告された導入結果と再学習・ラベル・画像品質の課題を整理した。資料本文が `MLOps` を扱っていないことを明示し、MLOps との関係は未評価として残した。
 - Structure: ユーザー指定の `wiki/architectures/` は新しいアーキテクチャページ種別として登録した。未解決課題は編集規約に従って `wiki/questions/hitl-ml-open-problems.md` に保存し、新しい `wiki/research_questions/` は追加していない。
+
+## 2026-05-26 | Karpathy 型の中核構成へ運用層を整理
+
+- Updated: `schema/AGENTS.md`, `schema/naming.md`, `schema/ingest.md`, `schema/query.md`, `schema/lint.md`, `schema/templates/*.md`
+- Updated: `logs/ingest.md`, `logs/query.md`, `logs/lint.md`, `README.md`, `wiki/index.md`
+- Change: `raw / wiki / schema / logs` を中核構成とし、旧 `AGENTS.md` と `wiki/templates/` を `schema/` へ、旧 `logs/log.md` を `logs/ingest.md` へ移動した。今後の query 成果と lint 結果の記録先を分離した。
 
 ## Entry Template
 
@@ -90,4 +90,4 @@
 ## Sources
 
 - [../README.md](../README.md) - リポジトリの目的と初期構成。
-- [../AGENTS.md](../AGENTS.md) - ログ運用を含む編集規約。
+- [../schema/AGENTS.md](../schema/AGENTS.md) - ログ運用を含む編集規約。
