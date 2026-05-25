@@ -28,6 +28,7 @@ research-llm-wiki/
 ├── wiki/
 │   ├── concepts/
 │   ├── papers/
+│   ├── architectures/
 │   ├── themes/
 │   ├── questions/
 │   ├── comparisons/
@@ -52,6 +53,7 @@ research-llm-wiki/
 | `raw/notes/` | 人間が取得した一次メモ、観察記録 | 原資料として変更しない |
 | `wiki/papers/` | 論文単位の読解と位置付け | LLM が更新可 |
 | `wiki/concepts/` | 手法、概念、評価軸、データセット | LLM が更新可 |
+| `wiki/architectures/` | システム構成、機能分解、運用フロー | LLM が更新可 |
 | `wiki/themes/` | 研究テーマ候補と検証計画 | LLM が更新可 |
 | `wiki/questions/` | 未解決課題、検証すべき問い | LLM が更新可 |
 | `wiki/comparisons/` | 手法・論文・課題設定の比較表 | LLM が更新可 |
@@ -81,6 +83,7 @@ research-llm-wiki/
 
 - [論文ページ](wiki/templates/paper.md)
 - [概念ページ](wiki/templates/concept.md)
+- [アーキテクチャページ](wiki/templates/architecture.md)
 - [研究テーマ候補ページ](wiki/templates/theme.md)
 - [未解決課題ページ](wiki/templates/question.md)
 - [比較ページ](wiki/templates/comparison.md)
