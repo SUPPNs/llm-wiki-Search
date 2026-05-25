@@ -83,6 +83,28 @@
 - Evidence: `raw/papers/human_in_the_loop_ml_system_architecture_2024.pdf`
 - Change: 4.2 節の個別指標（運転員の画像入力時間 `67%` 削減、保守員の作業量 `30%` 減少）と、結論の総括値（人間の作業負荷 `50%` 削減）は、本文で集計関係が示されていないことを `矛盾` と synthesis に明記した。既存の HITL 概念、アーキテクチャ、問い、テーマの構成と主要引用は原資料に沿うことを確認した。
 
+## 2026-05-26 | 知識グラフを用いた T5 fine-tuning 論文を取り込み
+
+- Created: [[papers/t5-knowledge-graph-finetuning-complex-tasks-2025|A Fine-Tuning Approach for T5 Using Knowledge Graphs to Address Complex Tasks]]
+- Created: [[concepts/t5-knowledge-graph-finetuning|知識グラフを用いた T5 fine-tuning]], [[architectures/t5-kg-finetuning-architecture|T5 知識グラフ fine-tuning アーキテクチャ]]
+- Created: [[comparisons/t5-vs-t5-kg-finetuning|T5 と知識グラフ併用 T5 の比較]], [[questions/kg-finetuning-evaluation-reproducibility|知識グラフ強化 T5 の性能改善を再現可能に評価できるか]]
+- Updated: `wiki/index.md`
+- Evidence: `raw/papers/t5_knowledge_graph_finetuning_complex_tasks_2025.pdf` - Abstract、2-4 節、図1-2、表1-3、pp.1-5。
+- Change: T5 の入力と学習損失へ知識グラフのエンティティ・関係埋め込みを統合する構成、SQuAD1.1 上の比較・アブレーション・知識グラフ規模別の報告値を整理した。評価指標の定義、知識グラフの出所・対応付け・規模定義が本文で確認できない点を、再現性の未解決課題と矛盾として記録した。
+- Decision: 広範な `knowledge graph reasoning` 概念ページは単一論文の特定方式から一般化しないため作成しなかった。研究テーマページは、知識グラフ規模と評価手順の仕様が不足し、独立した研究計画として確定する根拠が十分でないため作成を保留した。
+
+## 2026-05-26 | Enterprise RAG の CoT poisoning 検知論文を取り込み
+
+- Created: [[papers/cot_poisoning_enterprise_rag|Detecting Chain-of-Thought Poisoning in Enterprise LLM Applications]]
+- Created: [[concepts/chain_of_thought_poisoning|Chain-of-Thought poisoning]], [[concepts/behavioral_drift_detection|Behavioral drift detection]], [[concepts/llm_as_judge|LLM-as-Judge]], [[concepts/rag_security|RAG security]]
+- Created: [[architectures/defense_in_depth_rag_security|Enterprise RAG security の3層防御アーキテクチャ]], [[comparisons/prompt_injection_vs_cot_poisoning|Prompt injection と CoT poisoning の比較]]
+- Created: [[questions/is_llm_as_judge_reliable|CoT poisoning 検知に LLM-as-Judge は信頼できるか]], [[themes/enterprise_rag_security|Enterprise RAG の推論汚染検知と運用ガバナンス]]
+- Updated: `wiki/index.md`
+- Evidence: `raw/papers/DetectingChainofThoughtPoisoninginLLMEnterpriseSystems.pdf` - Abstract、Chapters 1-6、Tables 5.1-5.5、Appendix A、pp.1, 9-25。
+- Change: RAG knowledge base を介した CoT poisoning の定義、regex / behavioral drift / LLM-as-Judge の3層防御、tiered OR ensemble risk scoring、behavioral drift `24.8% (62/250)`、ensemble precision `95.7%`・recall `90.0%`・F1 `92.8%` を整理した。NIST AI RMF と SOC workflow は論文の設計上の位置付けとして記録し、監査済み適合結果とは区別した。
+- Conflict / Question: LLM-as-Judge は独立検知層として示されるが、評価ラベルは Layer 2 drift detection に依存するため、独立した信頼性を未解決課題として保存した。
+- Structure: ユーザー指定のページパスを保持するため、本 ingest の新規ページは明示指定された underscore 名を採用した。指定された `raw/DetectingChainofThoughtPoisoninginLLMEnterpriseSystems.pdf` は存在せず、実在する `raw/papers/DetectingChainofThoughtPoisoninginLLMEnterpriseSystems.pdf` を読み取り専用の情報源として参照した。
+
 ## Entry Template
 
 ```markdown
