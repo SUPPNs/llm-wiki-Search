@@ -1,5 +1,5 @@
 ---
-title: "<Research Theme Candidate>"
+title: "<研究テーマ候補名>"
 type: theme
 tags: []
 source_files: []
@@ -7,52 +7,52 @@ last_updated: YYYY-MM-DD
 status: exploring
 ---
 
-# <Research Theme Candidate>
+# <研究テーマ候補名>
 
-## Summary
+## 概要
 
 <調査または研究として追う価値があるテーマ候補を一段落で記す。>
 
-## Research Question
+## 中心となる研究課題
 
 <検証可能な形で中心となる問いを記す。>
 
-## Facts
+## 事実
 
 - <テーマを動機付ける既知の結果、観測済みの不足、既存研究の制約。>
 
-## Interpretations
+## 解釈
 
-- Hypothesis: <根拠から想定する仮説。>
-- Potential contribution: <成立した場合の新規性または価値。>
-- Why now: <このテーマが有望と考える理由。>
+- 仮説: <根拠から想定する仮説。>
+- 貢献候補: <成立した場合の新規性または価値。>
+- 現時点で注目する理由: <このテーマが有望と考える理由。>
 
-## Candidate Approach
+## 検証方針
 
-| Item | Plan |
+| 項目 | 計画 |
 | --- | --- |
-| Target setting |  |
-| Proposed method |  |
-| Baselines |  |
-| Evaluation metrics |  |
-| Required data / resources |  |
-| Falsification condition |  |
-| Risks |  |
+| 対象設定 |  |
+| 提案手法 |  |
+| ベースライン |  |
+| 評価指標 |  |
+| 必要なデータ / 資源 |  |
+| 反証条件 |  |
+| リスク |  |
 
-## Open Questions
+## 未解決課題
 
-- [[questions/<question-slug>|<Question>]] - <テーマ評価の前に解くべき問い。>
+- [[questions/<question-slug>|<未解決課題>]] - <テーマ評価の前に解くべき問い。>
 
-## Connections
+## 関連ページ
 
-- [[papers/<paper-slug>|<Paper Title>]] - <根拠となる既存研究。>
-- [[concepts/<concept-slug>|<Concept>]] - <主要概念。>
-- [[comparisons/<comparison-slug>|<Comparison>]] - <差分または空白を示す比較。>
+- [[papers/<paper-slug>|<論文タイトル>]] - <根拠となる既存研究。>
+- [[concepts/<concept-slug>|<概念名>]] - <主要概念。>
+- [[comparisons/<comparison-slug>|<比較名>]] - <差分または空白を示す比較。>
 
-## Conflicts
+## 矛盾
 
-- None identified.
+- 現時点で確認された矛盾はない。
 
-## Sources
+## 情報源
 
 - `raw/<category>/<source-file>` - <テーマ候補を動機付ける事実。>

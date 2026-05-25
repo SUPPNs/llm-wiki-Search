@@ -1,5 +1,5 @@
 ---
-title: "<Open Question>"
+title: "<未解決課題>"
 type: question
 tags: []
 source_files: []
@@ -7,50 +7,50 @@ last_updated: YYYY-MM-DD
 status: open
 ---
 
-# <Open Question>
+# <未解決課題>
 
-## Summary
+## 概要
 
 <未解決の問いを簡潔かつ検証可能な表現で記す。>
 
-## Why It Matters
+## 重要性
 
 <この問いが研究テーマの選択、方法、評価、再現性に与える影響を記す。>
 
-## Facts
+## 事実
 
 - <問いの発生源となった既存結果、矛盾、未評価条件。>
 
-## Interpretations
+## 解釈
 
 - <原因の仮説や、解けた場合に変わりそうな判断。>
 
-## Resolution Criteria
+## 解決条件
 
-| Item | Description |
+| 項目 | 内容 |
 | --- | --- |
-| Evidence needed |  |
-| Candidate experiment / review |  |
-| Relevant metric |  |
-| Answered when |  |
+| 必要な証拠 |  |
+| 候補となる実験 / 調査 |  |
+| 関連する評価指標 |  |
+| 解決とみなす条件 |  |
 
-## Affected Themes
+## 関係する研究テーマ候補
 
-- [[themes/<theme-slug>|<Theme Name>]] - <この問いがテーマ判断に与える影響。>
+- [[themes/<theme-slug>|<研究テーマ候補名>]] - <この問いがテーマ判断に与える影響。>
 
-## Connections
+## 関連ページ
 
-- [[papers/<paper-slug>|<Paper Title>]] - <問いを生じさせた証拠。>
-- [[concepts/<concept-slug>|<Concept>]] - <関連概念。>
+- [[papers/<paper-slug>|<論文タイトル>]] - <問いを生じさせた証拠。>
+- [[concepts/<concept-slug>|<概念名>]] - <関連概念。>
 
-## Open Questions
+## 未解決課題
 
 - <この問いに付随する下位の問いがあれば記す。>
 
-## Conflicts
+## 矛盾
 
-- None identified.
+- 現時点で確認された矛盾はない。
 
-## Sources
+## 情報源
 
 - `raw/<category>/<source-file>` - <未解決であることを示す箇所。>

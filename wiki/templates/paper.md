@@ -1,5 +1,5 @@
 ---
-title: "<Paper Title>"
+title: "<論文タイトル>"
 type: paper
 authors: []
 year: null
@@ -10,50 +10,50 @@ last_updated: YYYY-MM-DD
 status: draft
 ---
 
-# <Paper Title>
+# <論文タイトル>
 
-## Summary
+## 概要
 
 <この論文が扱う問題、提案、主結果、研究テーマ探索上の意味を短く記す。>
 
-## Research Context
+## 研究上の位置付け
 
-- Problem setting:
-- Claimed contribution:
-- Relevant themes: [[themes/<theme-slug>|<Theme Name>]]
+- 問題設定:
+- 主張される貢献:
+- 関連する研究テーマ候補: [[themes/<theme-slug>|<研究テーマ候補名>]]
 
-## Facts
+## 事実
 
 - <論文が直接述べる問題設定、方法、結果、限界。根拠となる節・表・ページを付記する。>
 
-## Interpretations
+## 解釈
 
 - <他の研究との位置付けや、結果から導けそうな含意。事実と区別する。>
 
-## Method And Evaluation
+## 手法と評価
 
-| Item | Description |
+| 項目 | 内容 |
 | --- | --- |
-| Method |  |
-| Dataset / Environment |  |
-| Baselines |  |
-| Metrics |  |
-| Main Results |  |
-| Limitations |  |
+| 手法 |  |
+| データセット / 環境 |  |
+| ベースライン |  |
+| 評価指標 |  |
+| 主な結果 |  |
+| 限界 |  |
 
-## Open Questions
+## 未解決課題
 
-- [[questions/<question-slug>|<Question>]] - <なぜこの論文から生じる問いか。>
+- [[questions/<question-slug>|<未解決課題>]] - <なぜこの論文から生じる問いか。>
 
-## Connections
+## 関連ページ
 
-- [[concepts/<concept-slug>|<Concept>]] - <関係>
-- [[comparisons/<comparison-slug>|<Comparison>]] - <比較上の位置付け>
+- [[concepts/<concept-slug>|<概念名>]] - <関係>
+- [[comparisons/<comparison-slug>|<比較名>]] - <比較上の位置付け>
 
-## Conflicts
+## 矛盾
 
-- None identified.
+- 現時点で確認された矛盾はない。
 
-## Sources
+## 情報源
 
 - `raw/papers/<source-file>` - <書誌情報、参照した節、ページ、または取得日。>

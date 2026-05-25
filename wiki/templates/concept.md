@@ -1,5 +1,5 @@
 ---
-title: "<Concept Name>"
+title: "<概念名>"
 type: concept
 aliases: []
 tags: []
@@ -8,35 +8,35 @@ last_updated: YYYY-MM-DD
 status: draft
 ---
 
-# <Concept Name>
+# <概念名>
 
-## Summary
+## 概要
 
 <概念の定義と、研究テーマ探索でこの概念を追う理由を短く記す。>
 
-## Facts
+## 事実
 
-- Definition: <資料で支持される定義。>
-- Observed use: <どの論文・設定で使われるか。>
-- Measurement or implementation: <指標または実装上の扱いがあれば記す。>
+- 定義: <資料で支持される定義。>
+- 使用例: <どの論文・設定で使われるか。>
+- 測定または実装: <指標または実装上の扱いがあれば記す。>
 
-## Interpretations
+## 解釈
 
-- <概念間の関係、設計トレードオフ、テーマ候補への示唆。>
+- <概念間の関係、設計上のトレードオフ、テーマ候補への示唆。>
 
-## Open Questions
+## 未解決課題
 
-- [[questions/<question-slug>|<Question>]] - <この概念について未確認の点。>
+- [[questions/<question-slug>|<未解決課題>]] - <この概念について未確認の点。>
 
-## Connections
+## 関連ページ
 
-- [[papers/<paper-slug>|<Paper Title>]] - <この概念を用いる／検証する論文。>
-- [[themes/<theme-slug>|<Theme Name>]] - <テーマにおける役割。>
+- [[papers/<paper-slug>|<論文タイトル>]] - <この概念を用いる、または検証する論文。>
+- [[themes/<theme-slug>|<研究テーマ候補名>]] - <テーマにおける役割。>
 
-## Conflicts
+## 矛盾
 
-- None identified.
+- 現時点で確認された矛盾はない。
 
-## Sources
+## 情報源
 
 - `raw/<category>/<source-file>` - <この概念を裏付ける範囲。>
