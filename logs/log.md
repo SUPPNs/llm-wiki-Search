@@ -30,6 +30,22 @@
 - Evidence: `raw/papers/graphrag-comparison.pdf`
 - Change: 原資料の内容を変えず、Obsidian と Markdown から参照しやすい英数字の短いファイル名へユーザーが変更したため、wiki の情報源パスを更新した。同時に更新対象ページの見出しを現行規約の日本語表記へ移行した。
 
+## 2026-05-25 | 二部グラフ検索によるコスメ推薦論文を取り込み
+
+- Updated: [[papers/arakaki-2026-bipartite-graph-rag-cosmetics|二部グラフ検索を活用したRAGに基づく推薦理由の説得力の向上]]
+- Updated: [[concepts/bipartite-graph-retrieval|二部グラフ検索（BGR）]], [[concepts/persuasive-recommendation-reasons|推薦理由の説得力]], [[concepts/graphrag|GraphRAG]]
+- Updated: [[comparisons/graph-augmented-rag-objectives|グラフ拡張 RAG の目的と評価の比較]], [[comparisons/chunk-vs-community-graphrag|チャンク方式とコミュニティ方式の GraphRAG 比較]]
+- Updated: [[questions/evaluating-persuasive-rag-recommendations|説得力の高い RAG 推薦を忠実性と公平性を含めてどう評価するか]], [[questions/integrating-behavior-and-knowledge-graphs|行動二部グラフと知識グラフをどのように統合するか]]
+- Updated: [[themes/hybrid-graph-rag-for-grounded-recommendations|根拠付き推薦のためのハイブリッド Graph-RAG]]
+- Evidence: `raw/papers/bipartite-graph-rag-cosmetics.pdf`, `raw/papers/graphrag-comparison.pdf`
+- Change: BGR による推薦理由の評価結果を取り込み、既存の知識グラフ型 GraphRAG とグラフ対象・目的・評価指標の違いを比較した。両方式の数値は直接比較せず、行動証拠と内容証拠を統合する研究テーマ候補として整理した。
+
+## 2026-05-25 | ハイブリッド Graph-RAG テーマページを UTF-8 日本語で修復
+
+- Updated: [[themes/hybrid-graph-rag-for-grounded-recommendations|根拠付き推薦のためのハイブリッド Graph-RAG]]
+- Evidence: [[papers/arakaki-2026-bipartite-graph-rag-cosmetics|BGR 論文]], [[papers/anaguchi-2025-graphrag-comparison|GraphRAG 比較論文]], [[comparisons/graph-augmented-rag-objectives|横断比較]]
+- Change: Obsidian で読める UTF-8 の日本語 Markdown としてテーマページを再構成し、指定された `研究方法` セクションを含む構造へ揃えた。
+
 ## Entry Template
 
 ```markdown

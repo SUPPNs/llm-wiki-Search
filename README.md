@@ -57,9 +57,17 @@ research-llm-wiki/
 3. 原資料を読んで、該当する雛形を `wiki/templates/` から選び、既存ページが
    あれば更新し、なければページを作成します。
 4. ページには、根拠のある事実、解釈、未解決課題を混在させずに記述し、
-   `Sources` セクションから原資料を追跡可能にします。
+   `情報源` セクションから原資料を追跡可能にします。
 5. テーマや問いを `[[Wikiリンク]]` で接続し、重要な更新を
    [logs/log.md](logs/log.md) に追記します。
+
+## 運用サイクル
+
+- 取り込み: 新しい原資料を読み、関連する知識ページと `wiki/index.md` を更新します。
+- 問い合わせ: 有用な比較、分析、接続、研究テーマ候補、未解決課題が得られたら
+  会話だけに残さず `wiki/` に保存します。
+- 定期点検: ときどき wiki-lint を行い、索引漏れ、リンク切れ、孤立ページ、
+  矛盾、情報源やページ化すべき概念の不足を確認します。
 
 ## Page Templates
 
@@ -75,12 +83,14 @@ research-llm-wiki/
   基本とします。
 - 内部参照は `[[concepts/retrieval-augmented-generation|Retrieval-Augmented Generation]]`
   のような Obsidian 形式を使います。
-- 出典同士が食い違う場合は結論を消さず、対象ページの `Conflicts` に双方を
+- 出典同士が食い違う場合は結論を消さず、対象ページの `矛盾` に双方を
   記録します。
 - 詳細な編集規約は [AGENTS.md](AGENTS.md) を優先します。
 
 ## References
 
+- [Karpathy, LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+  - Query の成果を蓄積する wiki と定期 lint の運用思想
 - [Pratiyush/llm-wiki](https://github.com/Pratiyush/llm-wiki) - raw、wiki、agent schema
   を分離し、Wiki リンクで知識を結ぶ実装の参照元
 - [Pratiyush/llm-wiki Architecture](https://github.com/Pratiyush/llm-wiki/blob/master/docs/architecture.md)

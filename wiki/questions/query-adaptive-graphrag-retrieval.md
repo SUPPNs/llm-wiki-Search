@@ -42,7 +42,7 @@ GraphRAG の研究テーマになる。
 
 ## 関係する研究テーマ候補
 
-- 現時点で登録された研究テーマ候補はない。
+- [[themes/hybrid-graph-rag-for-grounded-recommendations|根拠付き推薦のためのハイブリッド Graph-RAG]] - 利用者や必要証拠に応じた検索経路選択に接続する。
 
 ## 関連ページ
 
@@ -51,6 +51,8 @@ GraphRAG の研究テーマになる。
 - [[concepts/chunk-based-graphrag|文書チャンクに基づく GraphRAG]]
 - [[concepts/community-based-graphrag|コミュニティ分類に基づく GraphRAG]]
 - [[comparisons/chunk-vs-community-graphrag|チャンク方式とコミュニティ方式の GraphRAG 比較]]
+- [[comparisons/graph-augmented-rag-objectives|グラフ拡張 RAG の目的と評価の比較]]
+- [[questions/integrating-behavior-and-knowledge-graphs|行動二部グラフと知識グラフをどのように統合するか]]
 
 ## 未解決課題
 
