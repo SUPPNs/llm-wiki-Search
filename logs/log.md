@@ -46,6 +46,12 @@
 - Evidence: [[papers/arakaki-2026-bipartite-graph-rag-cosmetics|BGR 論文]], [[papers/anaguchi-2025-graphrag-comparison|GraphRAG 比較論文]], [[comparisons/graph-augmented-rag-objectives|横断比較]]
 - Change: Obsidian で読める UTF-8 の日本語 Markdown としてテーマページを再構成し、指定された `研究方法` セクションを含む構造へ揃えた。
 
+## 2026-05-26 | index を研究領域別 synthesis entry point に強化
+
+- Updated: `wiki/index.md`
+- Evidence: [[papers/anaguchi-2025-graphrag-comparison|GraphRAG 比較分析]], [[papers/arakaki-2026-bipartite-graph-rag-cosmetics|BGR 論文]], [[comparisons/graph-augmented-rag-objectives|横断比較]], [[themes/hybrid-graph-rag-for-grounded-recommendations|ハイブリッド研究テーマ]]
+- Change: 学術文書 QA、説明可能な推薦、行動証拠と内容証拠の統合の各研究領域で `concepts`・`comparisons`・`questions`・`themes` を束ね、全ページカタログと現時点の統合的な読みを同一 index に集約した。新しいレイヤーは追加していない。
+
 ## Entry Template
 
 ```markdown
