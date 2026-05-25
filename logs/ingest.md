@@ -77,6 +77,12 @@
 - Updated: `logs/ingest.md`, `logs/query.md`, `logs/lint.md`, `README.md`, `wiki/index.md`
 - Change: `raw / wiki / schema / logs` を中核構成とし、旧 `AGENTS.md` と `wiki/templates/` を `schema/` へ、旧 `logs/log.md` を `logs/ingest.md` へ移動した。今後の query 成果と lint 結果の記録先を分離した。
 
+## 2026-05-26 | HITL ML ingest 結果の根拠対応を点検
+
+- Updated: [[papers/shimbo-2024-hitl-ml-system-architecture|HITL ML の運用のためのシステムアーキテクチャの定義と実践]], [[concepts/human_in_the_loop_ml|Human in the Loop Machine Learning]], `wiki/index.md`
+- Evidence: `raw/papers/human_in_the_loop_ml_system_architecture_2024.pdf`
+- Change: 4.2 節の個別指標（運転員の画像入力時間 `67%` 削減、保守員の作業量 `30%` 減少）と、結論の総括値（人間の作業負荷 `50%` 削減）は、本文で集計関係が示されていないことを `矛盾` と synthesis に明記した。既存の HITL 概念、アーキテクチャ、問い、テーマの構成と主要引用は原資料に沿うことを確認した。
+
 ## Entry Template
 
 ```markdown
